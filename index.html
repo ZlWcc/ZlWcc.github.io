@@ -165,6 +165,50 @@
 
 
   
+    <article id="post-重装系统后的博客系统恢复" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前乱进网站，电脑中毒了，Chrome浏览器启动程序被篡改，主页挟持。小胳膊拧不过大腿，无奈重装。</p>
+<p>重装后博客系统的恢复一直搁置，直到今天花了一个小时搞定，比想象中要顺利。</p>
+<p>1、首先安装Github，因为之前有离线安装包，重新安装十分方便。安装好后登陆Github账号即可。<br>2、重新安装node.js</p>
+<p>node -v<br>npm -v<br>检查node.js环境安装成功</p>
+<p>3、重新安装hexo<br>npm install hexo-cli -g<br>npm install hexo –save<br>hexo -v<br>重新安装hexo，及检查</p>
+<p>hexo init<br>初始化</p>
+<p>npm install<br>安装需要的组件</p>
+<p>将原有备份的hexo文件夹中，themes 、sources文件夹及_config.yml文件移至新文件夹</p>
+<p>hexo d 发布遇到错误提示：<br>ERROR Deployer not found: Git<br>解决办法：<br>输入npm install hexo-deployer-git –save</p>
+<p>hexo d 发布遇到错误提示：<br>FATAL fatal: Not a git repository (or any of the parent directories): .git<br>解决办法：<br>git init 生成一个.git隐藏文件夹，将这个文件夹移至.deploy_git文件夹，发布成功。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/02/08/重装系统后的博客系统恢复/" class="archive-article-date">
+  	<time datetime="2017-02-08T13:22:06.863Z" itemprop="datePublished"><i class="icon-clock"></i>2017-02-08</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-博客搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
