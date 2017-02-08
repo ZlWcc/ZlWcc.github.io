@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+     html body{overflow：hidden;margin: 0;display: block;}
+     body{
+       font-family: 'Open-Sans','Helvetica Neue','Hiragino Sans GB','LiHei Pro',Arial,Sans-serif;
+     }
+     #wrapper{
+       position: absolute;
+       width: 400px;
+       margin-left: -210px;
+       margin-top: -150px;
+       top: 50%;
+       left: 50%;
+       text-align: center;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+    h1{
+      /*font-family: 'Open-Sans','Helvetica Neue','Hiragino Sans GB','LiHei Pro',Arial,Sans-serif;*/
+      font-family: 'Montserrat','Helvetica Neue',Arial,Sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 9px;
+      text-transform: uppercase;
+      margin: 12px;
+    }
+    h2{
+      color: #999;
+      font-weight: normal;
+      font-size: 16px;
+      letter-spacing: .11em;
+      margin-bottom: 30px;
+      left: 3px;
+    }
+    h1 h2{
+      position: relative;
+    }
+    p{margin: 0;}
+    a{
+      font-size: 14px;
+      line-height: 2em;
+      margin: 0;
+      letter-spacing: 2px;
+      color: #999;
+      text-decoration: none;
+    }
+    canvas{position: absolute;pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;}
+
+
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+         <h1>love You</h1>
+         <h2>Who came to me when the world was gone&#63;</h2>
+         <p><a target="_blank">I find thee</a></p>
+         <p><a target="_blank">I'm Safe</a></p>
+         <p><a target="_blank">&amp;Strong</a></p>
+         <p><a target="_blank">&amp;Glad</a></p>
+         <p><a target="_blank">致某某</a></p>
+     </div>
+     <canvas id="canvas"></canvas>
+     <script type="text/javascript">
+      //  document.addEventListener('touchmove', function (e) {e.preventDefault()})
+
+      var canvas = document.getElementById('canvas');
+
+
+      if (canvas.getContext){
+      var ctx = canvas.getContext('2d');
+      var dpr = window.devicePixelRatio || 1;
+
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      var f = 90;
+      var q;
+      var color = 0;
+      var m = Math;
+      var pi = m.PI*2;
+      var v = m.cos;
+      var rand = m.random;
+      canvas.width = width*dpr;
+      canvas.height = height*dpr;
+      ctx.scale(dpr, dpr);
+      ctx.globalAlpha = 0.4;
+
+      }
+
+      function i(){
+        ctx.clearRect(0,0,width,height);
+        random=rand()*0.4*height+0.3*height;
+        q=[{x:0,y:random},{x:0,y:random+height*.15}];
+        while(q[1].x<width+f) draw(q[0], q[1]);
+      }
+
+      function draw(i,j){
+        ctx.beginPath();
+        ctx.moveTo(i.x, i.y);
+        ctx.lineTo(j.x, j.y);
+        var k = j.x + (rand()*2-0.25)*f;
+        var n = hlimit(j.y);
+        ctx.lineTo(k,n);
+        ctx.closePath();
+        color+=pi/50;
+        ctx.fillStyle = '#'+(v(color)*127+128<<16 | v(color+pi/3)*127+128<<8 | v(color+pi/3*2)*127+128).toString(16);
+
+        ctx.fill();
+        q[0] = q[1];
+        q[1] = {x:k,y:n};
+      }
+
+      function hlimit(p){
+        // if(random>=0.5){var k=2.2;}else{var k=1.8;}
+        var t = p + (rand()*2-1)*f;
+        return (t>height||t<0) ? hlimit(p) : t;
+      }
+
+      function dev(){
+        var u = window.navigator.userAgent;
+        return {
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+            iPad: u.indexOf('iPad') > -1, //是否为iPad
+            webApp: u.indexOf('Safari') == -1 ,//是否为web应用程序，没有头部与底部
+            weixin: u.indexOf('MicroMessenger') == -1 //是否为微信浏览器
+        };
+      }
+      var browser ={versions:dev()};
+      if(browser.versions.mobile === true){
+        document.ontouchstart = i;
+      }else{
+      document.onclick = i;}
+
+      i();
+     </script>
+     <script type="text/javascript">
+     var audio = new Audio("solo.mp3");
+     function playaudio(){
+       if(audio.paused){
+         audio.play();
+         return;
+       }
+       audio.pause();
+     }
+
+     document.onkeydown=function(event){
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if(e && e.keyCode==80){ // 按 p
+          p=1;
+        }
+      if(e && e.keyCode==73 && p==1){ // 按 i
+          i=1;
+        }
+      if(e && e.keyCode==78 && i==1){ // n 键
+          n=1;
+        }
+      if(e && e.keyCode==75 && n==1){ // k 键
+          n=0;
+          i=0;
+          p=0;
+         playaudio();
+        }
+        if(e && e.keyCode!=80 && e.keyCode!=73 && e.keyCode!=78 && e.keyCode!=75){
+          n=0;
+          i=0;
+          p=0;
+        }
+     };
+     </script>
+  </body>
+</html>
