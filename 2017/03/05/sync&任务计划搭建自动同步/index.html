@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://21w.space">
-  <title>Archives: 2016/11 | 贰十一万</title>
+  <title>磁盘自动同步 | 贰十一万</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="贰十一万">
-<meta property="og:url" content="http://21w.space/archives/2016/11/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="磁盘自动同步">
+<meta property="og:url" content="http://21w.space/2017/03/05/sync&任务计划搭建自动同步/index.html">
 <meta property="og:site_name" content="贰十一万">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/90d16a89ly1fdbrhyqhyfj20sz0dpmxz.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/90d16a89ly1fdbrhzdavmj20jd0f9aae.jpg">
+<meta property="og:updated_time" content="2017-03-07T03:54:21.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贰十一万">
+<meta name="twitter:title" content="磁盘自动同步">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/90d16a89ly1fdbrhyqhyfj20sz0dpmxz.jpg">
   
   
     <link rel="icon" href="/assets/img/max.jpg">
@@ -123,54 +127,101 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-sync&amp;任务计划搭建自动同步" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/04/博客搭建/" class="archive-article-date">
-  	<time datetime="2016-11-04T10:35:02.477Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/04/博客搭建/">博客搭建过程</a>
+    <h1 class="article-title" itemprop="name">
+      磁盘自动同步
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="" alt=""><br><a id="more"></a><br>但凡对硬盘资料的重要性、硬盘存储的不可靠性及恢复成本的昂贵有所认识，都会将硬盘重要资料备份。备份的方式有很多，常见的百度云，Dropbox等等，可以归为云备份。云备份的优点很多，但在脱网的情况下就完全失效了，而且当前云备份还有很多缺陷。除此以外最好的办法，我认为是本地硬盘备份——比如常备一块移动硬盘或多台计算机互联，保持重要资料同步备份。在适用性方面，我认为云备份是无可比拟的，但在便捷性和安全性方面，还是本地硬盘备份更好。手动方式费时费力，不适应长期工作。所以找到一个便捷可靠的自动备份方案就很重要了。</p>
+<p>本文记录使用SyncToy，以及windows系统自带的‘任务计划’ 功能，实现便捷的自动同步——当读取到移动硬盘连入时，自动同步指定文件。也可按此方法类似地实现多种备份。使用系统window10，64位。经过使用发现本方法操作简单，但功能强大。</p>
+<p>自动备份软件很多，选用SyncToy的原因：Microsoft推出，可靠，免费，功能简洁，无限制。</p>
+<p>首先<strong>安装SyncToy</strong>。本文采用<a href="https://www.microsoft.com/en-us/download/details.aspx?id=15155" target="_blank" rel="external">SyncToy2.1</a></p>
+<p><strong>创建同步方案</strong>。创建方案名称为test。定义同步方式（可以选择双向、单向及安全方式三种）。还可以设置过滤参数。SyncToy功能与设置不做赘述。</p>
+<p><strong>创建任务计划</strong>。插上移动硬盘，在事件查看器中找到对应事件。如图，找到相应事件——右键‘将任务附加到此事件上’——填写名称与描述、下一步、下一步——选择’启动程序’操作、填写启动程序参数——下一步、完成</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/90d16a89ly1fdbrhyqhyfj20sz0dpmxz.jpg" alt="1"><br><img src="http://wx2.sinaimg.cn/mw690/90d16a89ly1fdbrhzdavmj20jd0f9aae.jpg" alt="2"></p>
+<p><strong>完成</strong>。弹出，重新插入测试，自动完成同步。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/03/05/sync&任务计划搭建自动同步/" class="archive-article-date">
+  	<time datetime="2017-03-05T02:45:24.040Z" itemprop="datePublished"><i class="icon-clock"></i>2017-03-05</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SyncToy/">SyncToy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/自动备份/">自动备份</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+    <a href="/2026/11/05/Top/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Random：
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/01/2017-2-28存在的勇气1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《存在的勇气》第一讲-概录</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="sync&amp;任务计划搭建自动同步" data-title="磁盘自动同步" data-url="http://21w.space/2017/03/05/sync&amp;任务计划搭建自动同步/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"210000"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -194,8 +245,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
