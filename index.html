@@ -60,6 +60,10 @@ var _hmt = _hmt || [];
 		<nav class="header-menu">
 			<ul>
 			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -69,15 +73,11 @@ var _hmt = _hmt || [];
     			
             
     			
-    			<a q-on="click: openSlider(e, 'tagcloud')" href="javascript:void(0)">标签</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">链接</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">Me</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -114,6 +114,10 @@ var _hmt = _hmt || [];
 			
 			
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -132,6 +136,10 @@ var _hmt = _hmt || [];
 				<ul style="width: 50%">
 				
 				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+		        
 				</ul>
 			</nav>
 		</header>				
@@ -178,6 +186,10 @@ var _hmt = _hmt || [];
       
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2026/11/05/Top/">展开全文 >></a>
+        </p>
       
 
       
@@ -247,6 +259,10 @@ var _hmt = _hmt || [];
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/13/2017-4-11存在的勇气·第三讲/">展开全文 >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
@@ -314,6 +330,10 @@ var _hmt = _hmt || [];
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/31/对存在整体发问/">展开全文 >></a>
+        </p>
       
 
       
@@ -383,6 +403,10 @@ var _hmt = _hmt || [];
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/20/2017-3-14存在的勇气·第二讲/">展开全文 >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
@@ -446,6 +470,10 @@ var _hmt = _hmt || [];
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/05/sync&任务计划搭建自动同步/">展开全文 >></a>
+        </p>
       
 
       
@@ -515,6 +543,10 @@ var _hmt = _hmt || [];
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/01/2017-2-28存在的勇气1/">展开全文 >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
@@ -578,6 +610,10 @@ var _hmt = _hmt || [];
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/18/1.导言20160905/">展开全文 >></a>
+        </p>
       
 
       
@@ -647,6 +683,10 @@ var _hmt = _hmt || [];
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/11/2017-02-11成长的感知及其他/">展开全文 >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
@@ -710,6 +750,10 @@ var _hmt = _hmt || [];
 
       
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/10/2017-02-10山西记/">展开全文 >></a>
+        </p>
       
 
       
@@ -776,6 +820,10 @@ var _hmt = _hmt || [];
       
 
       
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/08/重装系统后的博客系统恢复/">展开全文 >></a>
+        </p>
+      
 
       
       <div class="clearfix"></div>
@@ -822,7 +870,7 @@ var _hmt = _hmt || [];
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
@@ -849,29 +897,21 @@ var _hmt = _hmt || [];
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 25%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 25%" q-on="click: openSlider(e, 'tagcloud')"><a href="javascript:void(0)" q-class="active:tagcloud">标签</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 25%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">链接</a></li>
-      
-        
-      
-      <li style="width: 25%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">Me</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
