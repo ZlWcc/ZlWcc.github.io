@@ -146,8 +146,42 @@
         document.ontouchstart = i;
       }else{
       document.onclick = i;}
-      
+
       i();
+     </script>
+     <script type="text/javascript">
+     var audio = new Audio("solo.mp3");
+     function playaudio(){
+       if(audio.paused){
+         audio.play();
+         return;
+       }
+       audio.pause();
+     }
+
+     document.onkeydown=function(event){
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if(e && e.keyCode==80){ // 按 p
+          p=1;
+        }
+      if(e && e.keyCode==73 && p==1){ // 按 i
+          i=1;
+        }
+      if(e && e.keyCode==78 && i==1){ // n 键
+          n=1;
+        }
+      if(e && e.keyCode==75 && n==1){ // k 键
+          n=0;
+          i=0;
+          p=0;
+         playaudio();
+        }
+        if(e && e.keyCode!=80 && e.keyCode!=73 && e.keyCode!=78 && e.keyCode!=75){
+          n=0;
+          i=0;
+          p=0;
+        }
+     };
      </script>
   </body>
 </html>
