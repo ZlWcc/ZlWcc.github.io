@@ -709,6 +709,10 @@ Footer
     text-decoration: none;
     color: #666666; }
 
+::selection {
+  background: #323232;
+  color: #fff; }
+
 .site-header {
   width: 100%;
   background: #fff;
