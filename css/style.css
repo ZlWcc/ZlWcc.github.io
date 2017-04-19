@@ -6,6 +6,10 @@ html {
 body {
   margin: 0; }
 
+::selection {
+    background: #323232;
+    color: #fff;}
+
 article,
 aside,
 details,
@@ -267,8 +271,9 @@ h6 {
   margin: 1.5em 0 1em; }
 
 p {
+  color: #555;
   margin: 1em 0;
-  line-height: 1.5; }
+  line-height: 1.625;}
 
 b,
 strong {
