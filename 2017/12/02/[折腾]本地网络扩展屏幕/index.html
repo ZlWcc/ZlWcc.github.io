@@ -16,7 +16,7 @@
 
   <!--Open Graph Title-->
   
-      <meta property="og:title" content="不可告人的话"/>
+      <meta property="og:title" content="本地网络扩展屏幕"/>
   
   <!--Open Graph Description-->
   
@@ -33,7 +33,7 @@
 
   <!-- Title -->
   
-  <title>不可告人的话 - 贰十一万</title>
+  <title>本地网络扩展屏幕 - 贰十一万</title>
 
 
   <link rel="shortcut icon" href="/assets/img/er.png">
@@ -121,26 +121,41 @@
         <!-- Title date & tags -->
         <div class="post-header">
           <h1 class="entry-title">
-            不可告人的话
+            本地网络扩展屏幕
             
           </h1>
           <p class="posted-on">
-          2017-10-27
+          2017-12-02
           </p>
           <div class="tags-links">
             
+              
+                <a href="/tags/spacedesk/" rel="tag">
+                  spacedesk
+                </a>
               
             
           </div>
         </div>
         <!-- Post Main Content -->
         <div class="entry-content">
-          <p><img src="http://wx3.sinaimg.cn/mw690/90d16a89gy1fjhw32n9sbj21nw18g4ar.jpg" alt=""><br><a id="more"></a></p>
-<h2 id="不可告人的话"><a href="#不可告人的话" class="headerlink" title="不可告人的话"></a>不可告人的话</h2><p>那天我看着你<br>很想把你吃掉<br>想叫你起身，脱掉衣服，赤裸身体<br>我很荒唐，像个孩子<br>不想见到你<br>见到你我就变成一个禽兽<br>而我还以为自己是思考哲学的高级人类</p>
-<p>聊天也会叫我痛苦<br>我要跟你说的每一话都是诗<br>而不是平淡无奇<br>文明的话，也都要拿掉<br>只用流氓的语言<br>泥沙俱下，酣畅淋漓</p>
-<p>身体发热的时候我们不知道发生了什么<br>每一根毫毛都竖起来在讨论着什么<br>你知不知道<br>我身体越来越多的部位不属于我了<br>他们询问花朵的消息，不听我说，春天在很远的地方<br>你啊你，还纯真的笑，不知道他们有多可怕<br>藏在你身体里的春天，要被他们捣碎成泥浆<br>淌成一条春天的河</p>
-<p>傻姑娘<br>你沉默着不说一句话<br>就像深海底下有一只海怪<br>海怪翻滚啊，怒吼啊，跳跃啊<br>海面上却什么也没有：没有风，也没有浪<br>水好深哦<br>要游出来，好难哦<br>那只海怪能冲出水面就好了<br>我这儿刚好也有一只<br>他们一定有很多话要说<br>说说深海的黑暗和寒冷，说说自由<br>说说天空中发生的激烈的事情<br>你呢，你知道天空中发生的是什么吗？<br>是霹雳闪电，是轰隆雷鸣<br>是你的春天下起了暴风雨</p>
-<p>暴风雨过后，一片宁静<br>你平躺的身体<br>我要在上面休息<br>柔软的大地，温暖的阳光<br>我要拥抱山峰，拥抱河流，拥抱森林<br>拥抱发丝掠过的潮热的春风</p>
+          <p><img src="http://wx2.sinaimg.cn/mw690/90d16a89gy1fjhvyeirsaj22d61ksnpd.jpg" alt=""><br><a id="more"></a></p>
+<p>边看视频，边切换着做笔记，这种做法实在是叫人受不了——太麻烦了。手边刚好放了一台闲置的android平板。突然有了想法，能不能把平板做成扩展屏幕呢？</p>
+<p>结果是可以的，实现起来并不容易。</p>
+<p>比较了twomonUSB、wiDisplay，EZcast，spacedesk，都有不好实现。</p>
+<p>twomonUSB需要购买APP，并且要用USB数据线连接起来。wiDisplay、EZcast都能比较容易连接PC与平板的，实现屏幕投影，但是切换扩展屏幕有问题。spacedesk在平板端显示无法连接，死在第一步。</p>
+<p>然而，最后用spacedesk成功了。<br><img src="http://wx2.sinaimg.cn/mw690/90d16a89gy1fm1sxu3a5bg20oj0dwb2a.gif" alt=""></p>
+<p>twomonUSB不考虑了。wiDisplay和EZcast尝试了很久，无耐找到的资料实在太少，只能再想别的办法。最后发现<a href="http://spacedesk.ph/download/documentation.pdf" target="_blank" rel="external">spacedesk用户手册</a>相当详尽，并且按照手册真的成功了。</p>
+<p>有几个方面造成了之前的情况：</p>
+<ol>
+<li><p>电脑和平板连VPN，导致两者无法连接。</p>
+</li>
+<li><p>防火墙设置、PC共享设置，参考手册</p>
+</li>
+<li><p>另外是WIN10的坑，显示设置无法打开。最终看这个<a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-start/display-adapter-properties-will-not-open-when/f3e31f85-a905-4f5a-9718-ad7b99ea59d5" target="_blank" rel="external">答案</a>,用疑难诊断以后就好了。</p>
+</li>
+</ol>
+<p>高大上的双屏用起来。其他设备之间也是可以扩展，比如ios、mac等，顺便还发现了复制屏幕原来这么容易。等有需要了再研究。</p>
 
         </div>
       </article>
@@ -160,13 +175,9 @@
     <div class="nav-links">
       
         <div class="nav-previous">
-          <a href="/2017/10/24/[路上]轻盈的爱情和沉重的婚姻/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+          <a href="/2017/10/27/[呓语]不可告人的话/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
         </div>
       
-      
-        <div class="nav-next">
-          <a href="/2017/12/02/[折腾]本地网络扩展屏幕/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
-        </div>
       
     </div>
 
